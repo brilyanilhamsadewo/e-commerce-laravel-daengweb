@@ -25,4 +25,6 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
 
     //INI ADALAH ROUTE BARU
     Route::resource('category', 'CategoryController')->except(['create', 'show']);
+
+    Route::resource('product', 'ProductController');
 });

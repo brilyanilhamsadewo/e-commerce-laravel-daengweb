@@ -16,7 +16,8 @@
 	<link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/css/simple-line-icons.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-	<link href="{{ asset('assets/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
+  @yield('css')
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
   
