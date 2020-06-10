@@ -8,7 +8,7 @@
 	<meta name="author" content="Daengweb">
   <meta name="keyword" content="aplikasi ecommerce laravel, tutorial laravel basic, belajar laravel, panduan belajar laravel">
     
-  	<!-- PERHATIKAN BAGIAN INI, APAPUN YANG DIAPIT OLEH @SECTION('TITLE') PADA VIEW YANG MENGGUNAKAN MASTER INI, MAKA AKAN ME-REPLACE CODE DIBAWAH -->
+  	<!-- PERHATIKAN BAGIAN INI, APAPUN YANG DIAPIT OLEH section('TITLE') PADA VIEW YANG MENGGUNAKAN MASTER INI, MAKA AKAN ME-REPLACE CODE DIBAWAH -->
   	<!-- TITLE MENJADI KATA KUNCI, JADI JIKA MENGGUNAKAN KEY TITLE PADA yield, MAKA GUNAKAN KEY TITLE PADA section -->
     @yield('title')
 
@@ -35,7 +35,7 @@
             <button class="sidebar-minimizer brand-minimizer" type="button"></button>
         </div>
       
-      	<!-- BAGIAN INI AKAN DI-REPLACE SESUAI ISI YANG DIAPIT DARI @SECTION('CONTENT') -->
+      	<!-- BAGIAN INI AKAN DI-REPLACE SESUAI ISI YANG DIAPIT DARI section('CONTENT') -->
         @yield('content')
       
     </div>
