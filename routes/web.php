@@ -26,5 +26,9 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
     //INI ADALAH ROUTE BARU
     Route::resource('category', 'CategoryController')->except(['create', 'show']);
 
-    Route::resource('product', 'ProductController');
+   
+    //part5
+    Route::resource('product', 'ProductController')->except(['show']); //BAGIAN INI KITA TAMBAHKAN EXCETP KARENA METHOD SHOW TIDAK DIGUNAKAN
+    Route::get('/product/bulk', 'ProductController@massUploadForm')->name('product.bulk'); //TAMBAHKAN ROUTE INI
+    Route::post('/product/bulk', 'ProductController@massUpload')->name('product.saveBulk');
 });
