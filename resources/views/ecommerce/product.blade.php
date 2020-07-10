@@ -61,6 +61,8 @@
                                 <h5>Rp {{ number_format($row->price) }}</h5>
                             </div>
                         </div>
+                        
+                        {{-- part7 --}}
                         @empty
                         <div class="col-md-12">
                             <h3 class="text-center">Tidak ada produk</h3>
@@ -68,6 +70,8 @@
                         @endforelse
                     </div>
                 </div>
+                
+                {{-- part 7 --}}
                 <div class="col-lg-3">
                     <div class="left_sidebar_area">
                         <aside class="left_widgets cat_widgets">
@@ -78,10 +82,17 @@
                                 <ul class="list" >
                                     @foreach ($categories as $category)
                                     <li>
+                                      
+                                          <!-- MODIFIKASI BAGIAN INI -->
                                         <strong><a href="{{ url('/category/' . $category->slug) }}">{{ $category->name }}</a></strong>
-                                        
+                                      <!-- MODIFIKASI BAGIAN INI -->
+                
                                         @foreach ($category->child as $child)
+                                      
+                                          <!-- MODIFIKASI BAGIAN INI -->
                                         <ul class="list" style="display: block">
+                                        <!-- MODIFIKASI BAGIAN INI -->
+                                          
                                             <li>
                                                 <a href="{{ url('/category/' . $child->slug) }}">{{ $child->name }}</a>
                                             </li>
@@ -93,7 +104,7 @@
                             </div>
                         </aside>
                     </div>
-                </div>
+                </div>                
             </div>
 
             <div class="row">
